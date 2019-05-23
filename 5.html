@@ -7,31 +7,31 @@
     
     <title>Document</title>
     <script type="text/javascript">
-    
+//3.1
     var users = [
-    {departmentId: "0011DD", username: "user A 01", point: 7},
-    {departmentId: "0011DD", username: "user A 02", point: 7},
-    {departmentId: "0011DD", username: "user A 03", point: 7},
-    {departmentId: "0011AM", username: "user A 01", point: 8},
-    {departmentId: "0011AM", username: "user A 02", point: 8},
-    {departmentId: "0011AM", username: "user A 03", point: 8},
-    {departmentId: "0010AD", username: "user A 01", point: 3},
-    {departmentId: "0010AD", username: "user A 02", point: 3},
-    {departmentId: "0010AS", username: "user A 01", point: 4},
-    {departmentId: "0010AS", username: "user A 02", point: 4},
-    {departmentId: "0010MK", username: "user A 01", point: 5},
-    {departmentId: "0010MK", username: "user A 02", point: 5},
-    {departmentId: "0010K", username: "user K", point: 6},
-    {departmentId: "0010P", username: "user P", point: 5},
+    {departmentId: "0011DD", username: "user B01", point: 2},
+    {departmentId: "0011DD", username: "user B02", point: 2},
+    {departmentId: "0011DD", username: "user B03", point: 2},
+    {departmentId: "0011AM", username: "user B01", point: 3},
+    {departmentId: "0011AM", username: "user B02", point: 3},
+    {departmentId: "0011AM", username: "user B03", point: 3},
+    {departmentId: "0010AD", username: "user B01", point: 4},
+    {departmentId: "0010AD", username: "user B02", point: 4},
+    {departmentId: "0010AS", username: "user B01", point: 5},
+    {departmentId: "0010AS", username: "user B02", point: 5},
+    {departmentId: "0010MK", username: "user B01", point: 6},
+    {departmentId: "0010MK", username: "user B02", point: 6},
+    {departmentId: "0010K", username: "user K", point: 8},
+    {departmentId: "0010P", username: "user P", point: 7},
  ];
  
  var departments = [
     {id: "0011DD", code: "min_A", name: "Phong DRT", companyId: "111A"},
-    {id: "0011Ak", code: "min_A", name: "Phong LOG", companyId: "111A"},
-    {id: "0011AP", code: "min_A", name: "Phong POM", companyId: "111A"},
+    {id: "0011Ak", code: "min_A", name: "Phong APPLE", companyId: "111A"},
+    {id: "0011AP", code: "min_A", name: "Phong GYM", companyId: "111A"},
     {id: "0011AS", code: "bbc_A", name: "Phong SALE", companyId: "111A"},
     {id: "0011B", code: "bbc_B", name: "Phong ACC", companyId: "111B"},
-    {id: "0011C", code: "bbc_C", name: "Phong ACC", companyId: "111C"},
+    {id: "0011C", code: "bbc_C", name: "Phong ABC", companyId: "111C"},
  ];
  
  var companies = [
@@ -43,7 +43,7 @@
     {id: "111C", code: "cmp_C", name: "Company C"},
  
  ];
- 
+ //3.2 sap xep theo point
  users.sort(function(a, b){
  
      return a.point - b.point;
@@ -105,7 +105,6 @@
 <body>
 
     
-
 
 
 </body>
