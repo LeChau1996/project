@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+    <script type="text/javascript">
+    
+    var users = [
+    {departmentId: "0011DD", username: "user A 01", point: 7},
+    {departmentId: "0011DD", username: "user A 02", point: 7},
+    {departmentId: "0011DD", username: "user A 03", point: 7},
+    {departmentId: "0011AM", username: "user A 01", point: 8},
+    {departmentId: "0011AM", username: "user A 02", point: 8},
+    {departmentId: "0011AM", username: "user A 03", point: 8},
+    {departmentId: "0010AD", username: "user A 01", point: 3},
+    {departmentId: "0010AD", username: "user A 02", point: 3},
+    {departmentId: "0010AS", username: "user A 01", point: 4},
+    {departmentId: "0010AS", username: "user A 02", point: 4},
+    {departmentId: "0010MK", username: "user A 01", point: 5},
+    {departmentId: "0010MK", username: "user A 02", point: 5},
+    {departmentId: "0010K", username: "user K", point: 6},
+    {departmentId: "0010P", username: "user P", point: 5},
+ ];
+ 
+ var departments = [
+    {id: "0011DD", code: "min_A", name: "Phong DRT", companyId: "111A"},
+    {id: "0011Ak", code: "min_A", name: "Phong LOG", companyId: "111A"},
+    {id: "0011AP", code: "min_A", name: "Phong POM", companyId: "111A"},
+    {id: "0011AS", code: "bbc_A", name: "Phong SALE", companyId: "111A"},
+    {id: "0011B", code: "bbc_B", name: "Phong ACC", companyId: "111B"},
+    {id: "0011C", code: "bbc_C", name: "Phong ACC", companyId: "111C"},
+ ];
+ 
+ var companies = [
+ 
+    {id: "111A", code: "cmp_A", name: "Company A"},
+ 
+    {id: "111B", code: "cmp_B", name: "Company B"},
+ 
+    {id: "111C", code: "cmp_C", name: "Company C"},
+ 
+ ];
+ 
+ users.sort(function(a, b){
+ 
+     return a.point - b.point;
+ });
+ 
+ console.log(users);
+ function result_map_array(companies, departments, users){
+     var arrCompany = [];
+ 
+     for (var i=0; i< companies.length; i++){
+ 
+         var arrDept = [];
+ 
+         for (var j = 0; j<departments.length; j++){
+ 
+             if (companies[i].id === departments[j].companyId){
+ 
+                 var arrUsers = [];
+ 
+                 for (var k = 0; k<users.length; k++){
+ 
+                     if (departments[j].id === users[k].departmentId){
+ 
+                         arrUsers.push({"username": users[k].username,
+ 
+                             "point": users[k].point});
+ 
+                     }
+ 
+                 }
+ 
+                 arrDept.push({"departmentCode,": departments[j].code,
+ 
+                     "departmentName": departments[j].name,
+ 
+                     "users": arrUsers});
+ 
+             }
+ 
+         }
+ 
+         arrCompany.push({
+ 
+             "companyCode": companies[i].code,
+ 
+             "companyName": companies[i].name,
+ 
+             "departments": arrDept
+ 
+      });
+     }
+     return arrCompany;
+    }
+ var arrCompany = result_map_array(companies, departments, users);
+ console.log(arrCompany);
+    
+    </script>
+    </head>
+<body>
+
+    
+
+
+
+</body>
+</html>
